@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>タイトル</title>
-    <meta name="description" content="説明文">
+    <title>ハンバーガー</title>
+    <meta name="description" content="Webサイトの制作練習">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4740e0d0b1.js" crossorigin="anonymous"></script>
     <!-- favicon -->
-    <link rel="icon" href="image/favicon.ico">
+    <link rel="icon" href="image/favicon.png">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" media="screen">
     <!-- JS -->
@@ -19,7 +19,15 @@
 </head>
 
 <body>
-    <header>
+    <header class="l-header">
+        <h1 class="p-title">Hamburger</h1>
+        <form action="#" method="post" class="p-search__form">
+            <input type="search" name="search" class="p-search__form__box">
+            <input type="submit" name="submit" value="検索" class="p-search__form__btn">
+        </form>
+        <button class="p-hamburger js-hamburger">
+            <span>Menu</span>
+        </button>
     </header>
 
 </body>

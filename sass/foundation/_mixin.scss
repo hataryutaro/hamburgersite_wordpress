@@ -19,7 +19,7 @@
             @content;
         }
     }
-    @else if $point==desktoppc {
+    @else if $point==desktop {
         @media screen and (min-width: 1281px) {
             @content;
         }

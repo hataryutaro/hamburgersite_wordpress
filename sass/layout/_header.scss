@@ -1,13 +1,11 @@
-header {
-    background-color: antiquewhite;
-    height: 70px;
+.l-header {
+    background-color: $headerColor;
+    height: 217px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include breakpoint(tablet) {
-        background-color: aqua;
-        @include breakpoint(laptop) {
-            background-color: blue;
-            @include breakpoint(pc) {
-                background-color: brown;
-            }
-        }
+        @include breakpoint(pc) {}
     }
 }

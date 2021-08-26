@@ -2,6 +2,8 @@ $btnWidth: 25px;
 $btnHeight: 1.5px;
 $colorB: #2498B3;
 $colorA: #fff;
+
+/*
 .p-hamburger {
     display: inline-block;
     width: 50px;
@@ -9,6 +11,10 @@ $colorA: #fff;
     background-color: $colorA;
     position: relative;
     border: none;
+    @include breakpoint(pc) {
+        display: none
+    }
+    ;
     &::before,
     &::after {
         content: "";
@@ -81,3 +87,4 @@ $colorA: #fff;
         }
     }
 }
+*/
