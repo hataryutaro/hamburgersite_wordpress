@@ -1,0 +1,83 @@
+$btnWidth: 25px;
+$btnHeight: 1.5px;
+$colorB: #2498B3;
+$colorA: #fff;
+.p-hamburger {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: $colorA;
+    position: relative;
+    border: none;
+    &::before,
+    &::after {
+        content: "";
+        width: $btnWidth;
+        height: $btnHeight;
+        background: $colorB;
+        position: absolute;
+        left: calc( 50% - ( #{$btnWidth} / 2));
+        display: block;
+        transition: transform 0.2s;
+    }
+    &::before {
+        top: 30%;
+    }
+    &::after {
+        top: 70%;
+    }
+    >span {
+        width: $btnWidth;
+        height: $btnHeight;
+        font-size: 0;
+        background: $colorB;
+        background-size: auto $btnHeight;
+        position: absolute;
+        left: calc( 50% - ( #{$btnWidth} / 2));
+        top: 50%;
+        transition: transform 0.2s;
+    }
+    &.is-open {
+        background-color: $colorB;
+        &::before {
+            transform: rotate( 45deg);
+            top: 25px;
+            background: $colorA;
+        }
+        &::after {
+            transform: rotate( -45deg);
+            top: 25px;
+            background: $colorA;
+        }
+        >span {
+            background: none;
+        }
+    }
+}
+
+.p-plus {
+    &::before {
+        content: "";
+        height: 2px;
+        width: 25px;
+        background-color: #333;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+    }
+    &::after {
+        content: "";
+        height: 2px;
+        width: 25px;
+        background-color: #333;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+        transform: rotate(90deg);
+    }
+    &:hover {
+        &::after {
+            visibility: hidden;
+        }
+    }
+}

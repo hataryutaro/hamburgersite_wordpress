@@ -1,0 +1,13 @@
+header {
+    background-color: antiquewhite;
+    height: 70px;
+    @include breakpoint(tablet) {
+        background-color: aqua;
+        @include breakpoint(laptop) {
+            background-color: blue;
+            @include breakpoint(pc) {
+                background-color: brown;
+            }
+        }
+    }
+}

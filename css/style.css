@@ -1,0 +1,195 @@
+/*
+ * foundation
+ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*---base color----*/
+/*---font color----*/
+/*
+ * layout
+ */
+header {
+  background-color: antiquewhite;
+  height: 70px;
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    background-color: aqua;
+  }
+}
+
+/*
+ * object
+ */
+.p-hamburger {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+  border: none;
+}
+
+.p-hamburger::before, .p-hamburger::after {
+  content: "";
+  width: 25px;
+  height: 1.5px;
+  background: #2498B3;
+  position: absolute;
+  left: calc( 50% - ( 25px / 2));
+  display: block;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.p-hamburger::before {
+  top: 30%;
+}
+
+.p-hamburger::after {
+  top: 70%;
+}
+
+.p-hamburger > span {
+  width: 25px;
+  height: 1.5px;
+  font-size: 0;
+  background: #2498B3;
+  background-size: auto 1.5px;
+  position: absolute;
+  left: calc( 50% - ( 25px / 2));
+  top: 50%;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.p-hamburger.is-open {
+  background-color: #2498B3;
+}
+
+.p-hamburger.is-open::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 25px;
+  background: #fff;
+}
+
+.p-hamburger.is-open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 25px;
+  background: #fff;
+}
+
+.p-hamburger.is-open > span {
+  background: none;
+}
+
+.p-plus::before {
+  content: "";
+  height: 2px;
+  width: 25px;
+  background-color: #333;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+
+.p-plus::after {
+  content: "";
+  height: 2px;
+  width: 25px;
+  background-color: #333;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.p-plus:hover::after {
+  visibility: hidden;
+}
+/*# sourceMappingURL=style.css.map */
