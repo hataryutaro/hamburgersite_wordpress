@@ -1,11 +1,7 @@
 .l-header {
     background-color: $headerColor;
     height: 217px;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include breakpoint(tablet) {
-        @include breakpoint(pc) {}
-    }
 }

@@ -1,0 +1,23 @@
+.p-search__form {
+    height: 46px;
+    &__box {
+        padding: 0;
+        margin: 0;
+        background-image: url("/image/search.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        width: 230px;
+        height: 100%;
+        border: solid 1px $h1Color;
+        border-radius: 10px;
+    }
+    &__btn {
+        width: 78px;
+        height: 100%;
+        border: solid 1px $h1Color;
+        border-radius: 10px;
+        background-color: $menuColor;
+        color: $h1Color;
+        margin-left: 4px;
+    }
+}
