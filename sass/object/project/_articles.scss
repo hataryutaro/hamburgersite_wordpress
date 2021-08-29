@@ -1,0 +1,39 @@
+%branch-menu {
+    margin: 20px auto 0;
+    background-image: url("/image/takeout.jpg");
+    background-size: cover;
+    object-fit: cover;
+    width: 90%;
+    height: 642px;
+}
+
+.p-branch {
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        &__item {
+            @extend %branch-menu;
+            .p-branch__title {
+                color: $h2Color;
+                font-family: 'roboto', sans-serif;
+                font-size: 40px;
+                margin: 10px;
+            }
+            .p-branch__box {
+                background-color: #fff;
+                margin: 10px;
+                &__title {
+                    color: $h3Color;
+                    font-size: 22px;
+                    font-weight: bold;
+                    padding: 20px 10px;
+                }
+                &__text {
+                    color: $h3Color;
+                    font-size: 16px;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
