@@ -1,0 +1,15 @@
+.c-takeout__image {
+    background-image: url("/image/takeout.jpg");
+}
+
+.c-eatin__image {
+    background-image: url("/image/eatin.jpg");
+}
+
+.c-minus {
+    span {
+        background-color: $h2Color;
+        height: 10px;
+        width: 30px;
+    }
+}
