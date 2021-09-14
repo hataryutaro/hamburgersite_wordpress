@@ -1,0 +1,90 @@
+.p-branch {
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__item {
+            //background
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            //余白
+            margin: 20px;
+            padding: 10px;
+            //size
+            width: 90%;
+            max-width: 350px;
+            height: 642px;
+            //postion
+            position: relative;
+            //display
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+            @include breakpoint(tablet) {
+                margin: 40px 1vw;
+                padding: 20px;
+            }
+            @include breakpoint(pc) {
+                margin: 60px 1vw;
+                min-width: 36vw;
+                height: 62vw;
+            }
+            .p-branch__title {
+                color: $h2Color;
+                font-family: 'roboto', sans-serif;
+                font-size: 40px;
+                position: absolute;
+                top: 0;
+                @include breakpoint(pc) {
+                    font-size: 3.5vw;
+                }
+            }
+            &:hover {
+                .p-branch__title {
+                    color: $hoverColor;
+                    span {
+                        background-color: $hoverColor;
+                    }
+                }
+            }
+            .p-branch__box {
+                background-color: rgba(255, 255, 255, .8);
+                margin-top: 10px;
+                height: 161px;
+                @include breakpoint(tablet) {
+                    margin-top: 20px;
+                }
+                &__title {
+                    color: $h3Color;
+                    font-size: 22px;
+                    font-weight: bold;
+                    padding: 20px 10px;
+                    @include breakpoint(pc) {
+                        padding: 20px;
+                    }
+                }
+                &__text {
+                    color: $h3Color;
+                    font-size: 16px;
+                    padding: 0 10px;
+                    @include breakpoint(pc) {
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.p-branch__menu__item+.p-branch__menu__item {
+    margin-top: 0;
+    @include breakpoint(tablet) {
+        margin-top: 40px;
+        margin-left: 40px;
+        @include breakpoint(pc) {
+            margin-top: 60px;
+            margin-left: 2vw;
+        }
+    }
+}

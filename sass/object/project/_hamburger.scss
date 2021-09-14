@@ -1,94 +1,67 @@
-$btnWidth: 25px;
-$btnHeight: 1.5px;
-$colorB: #2498B3;
-$colorA: #fff;
 .p-hamburger {
-    display: none;
+    transition: opacity 300ms 0s ease;
+    //postion
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    //color
+    background-color: rgba(250, 250, 250, 0);
+    border: none;
+    //font
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: $h1Color;
+    font-weight: bold;
+    //余白
+    padding: 15px;
+    @include breakpoint(pc) {
+        display: none;
+    }
+    &:hover {
+        color: $hoverColor;
+    }
+    &::before,
+    &::after {
+        transition: opacity 300ms 0s ease;
+        opacity: 0;
+        content: "";
+        width: 45px;
+        height: 6px;
+        background: $h1Color;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        display: block;
+        z-index: 2000;
+    }
+    &::before {
+        transform: rotate( 45deg);
+    }
+    &::after {
+        transform: rotate( -45deg);
+    }
+    &.is-open {
+        span {
+            opacity: 0;
+        }
+        &::before,
+        &::after {
+            opacity: 1;
+        }
+        &:hover::before,
+        &:hover::after {
+            background: $hoverColor;
+        }
+    }
 }
 
 
 /*
-.p-hamburger {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: $colorA;
-    position: relative;
-    border: none;
-    @include breakpoint(pc) {
-        display: none
-    }
-    ;
+.p-hamburger.is-open {
     &::before,
     &::after {
-        content: "";
-        width: $btnWidth;
-        height: $btnHeight;
-        background: $colorB;
-        position: absolute;
-        left: calc( 50% - ( #{$btnWidth} / 2));
-        display: block;
-        transition: transform 0.2s;
-    }
-    &::before {
-        top: 30%;
-    }
-    &::after {
-        top: 70%;
-    }
-    >span {
-        width: $btnWidth;
-        height: $btnHeight;
-        font-size: 0;
-        background: $colorB;
-        background-size: auto $btnHeight;
-        position: absolute;
-        left: calc( 50% - ( #{$btnWidth} / 2));
-        top: 50%;
-        transition: transform 0.2s;
-    }
-    &.is-open {
-        background-color: $colorB;
-        &::before {
-            transform: rotate( 45deg);
-            top: 25px;
-            background: $colorA;
-        }
-        &::after {
-            transform: rotate( -45deg);
-            top: 25px;
-            background: $colorA;
-        }
-        >span {
-            background: none;
-        }
-    }
-}
-
-.p-plus {
-    &::before {
-        content: "";
-        height: 2px;
-        width: 25px;
-        background-color: #333;
-        position: absolute;
-        top: 25px;
-        right: 10px;
-    }
-    &::after {
-        content: "";
-        height: 2px;
-        width: 25px;
-        background-color: #333;
-        position: absolute;
-        top: 25px;
-        right: 10px;
-        transform: rotate(90deg);
-    }
-    &:hover {
-        &::after {
-            visibility: hidden;
-        }
+        right: 15px;
     }
 }
 */

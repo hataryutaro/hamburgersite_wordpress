@@ -1,15 +1,21 @@
 .p-search__form {
     height: 46px;
+    @include breakpoint(pc) {
+        margin-right: 30px;
+    }
     &__box {
         padding: 0;
         margin: 0;
         background-image: url("/image/search.png");
         background-repeat: no-repeat;
         background-position: 10px center;
-        width: 230px;
+        width: 50vw;
         height: 100%;
         border: solid 1px $h1Color;
         border-radius: 10px;
+        @include breakpoint(pc) {
+            width: 20vw;
+        }
     }
     &__btn {
         width: 78px;
@@ -19,5 +25,8 @@
         background-color: $menuColor;
         color: $h1Color;
         margin-left: 4px;
+        @include breakpoint(pc) {
+            width: 5vw;
+        }
     }
 }

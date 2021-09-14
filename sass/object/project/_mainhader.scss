@@ -12,5 +12,8 @@
         transform: translateY(-50%);
         color: $h2Color;
         font-size: 36px;
+        @include breakpoint(pc) {
+            font-size: 3.2vw;
+        }
     }
 }

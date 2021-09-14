@@ -1,0 +1,9 @@
+.p-title {
+    color: $h1Color;
+    font-size: 40px;
+    padding: 36px 0;
+    @include breakpoint(pc) {
+        margin-left: 60px;
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,59 @@
+.p-map {
+    position: relative;
+    &__image {
+        height: 700px;
+        object-fit: cover;
+        object-position: center;
+        @include breakpoint(tablet) {
+            height: 415px;
+            @include breakpoint(pc) {
+                height: 649px;
+            }
+        }
+    }
+    &__contener {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background-color: #00000071;
+        //background-color: antiquewhite;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-50%);
+        &__bg {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 415px;
+            width: 100%;
+            max-width: 950px;
+            @include breakpoint(tablet) {
+                height: 100%;
+            }
+        }
+        &__title {
+            color: $h2Color;
+            font-size: 30px;
+            margin: 20px;
+            @include breakpoint(tablet) {
+                margin: 40px;
+                @include breakpoint(pc) {
+                    margin: 60px;
+                    font-size: 2.8vw;
+                }
+            }
+        }
+        &__text {
+            color: $h2Color;
+            font-size: 14px;
+            line-height: 33px;
+            margin: 20px;
+            @include breakpoint(tablet) {
+                margin: 40px;
+                @include breakpoint(pc) {
+                    margin: 60px;
+                    font-size: 1.2vw;
+                }
+            }
+        }
+    }
+}

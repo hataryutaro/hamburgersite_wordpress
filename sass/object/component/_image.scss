@@ -8,8 +8,21 @@
 
 .c-minus {
     span {
+        content: "";
         background-color: $h2Color;
-        height: 10px;
-        width: 30px;
+        height: 2px;
+        width: 40px;
+        display: block;
+        margin-top: 10px;
+        @include breakpoint(tablet) {
+            width: 4vw;
+        }
+        &>span {
+            width: 80px;
+            margin-top: 20px;
+            @include breakpoint(tablet) {
+                width: 8vw;
+            }
+        }
     }
 }
