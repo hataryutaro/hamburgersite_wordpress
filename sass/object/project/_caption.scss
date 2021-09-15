@@ -1,0 +1,11 @@
+.p-main-caption {
+    color: $h3Color;
+    padding: 20px;
+    &__title {
+        font-size: 28px;
+    }
+    &__text {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}

@@ -155,33 +155,6 @@ ul {
   grid-column: 1/3;
 }
 
-.l-header {
-  background-color: #fff7ef;
-  height: 217px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (min-width: 1024px) {
-  .l-header {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
 /*
  * object
  */
@@ -217,6 +190,56 @@ ul {
   .c-minus span > span {
     width: 8vw;
   }
+}
+
+.p-menu {
+  margin: 0 20px 20px;
+}
+
+.p-menu__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-menu__contener {
+  background-color: #3c2b1c;
+  color: #FFF;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.p-menu__contener__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.p-menu__contener__caption {
+  font-size: 16px;
+  margin-top: 24px;
+}
+
+.p-menu__contener__text {
+  font-size: 16px;
+  line-height: 23px;
+  width: 246px;
+  margin-top: 10px;
+}
+
+.p-menu__contener__button {
+  font-size: 16px;
+  color: #707070;
+  border: none;
+  border-radius: 30px;
+  height: 42px;
+  width: 163px;
+  margin: 40px auto;
 }
 
 .p-branch__menu {
@@ -343,6 +366,20 @@ ul {
     margin-top: 60px;
     margin-left: 2vw;
   }
+}
+
+.p-main-caption {
+  color: #3c2a10;
+  padding: 20px;
+}
+
+.p-main-caption__title {
+  font-size: 28px;
+}
+
+.p-main-caption__text {
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 .p-footer__contener {
@@ -522,18 +559,29 @@ ul {
     }
 }
 */
-.p-main__header {
+.p-main-header {
   position: relative;
 }
 
-.p-main__header__image {
+.p-main-header__image {
   width: 100%;
   height: 285px;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 1;
 }
 
-.p-main__header__title {
+.p-main-header__bg {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.p-main-header__title {
   position: absolute;
   top: 50%;
   left: 5%;
@@ -541,11 +589,37 @@ ul {
           transform: translateY(-50%);
   color: #FFF;
   font-size: 36px;
+  z-index: 3;
 }
 
 @media screen and (min-width: 1024px) {
-  .p-main__header__title {
+  .p-main-header__title {
     font-size: 3.2vw;
+  }
+}
+
+.p-main-header__text {
+  z-index: 3;
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #FFF;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  .p-main-header__text {
+    top: 53%;
+    left: 19%;
+  }
+}
+
+@media screen and (min-width: 769px) and (min-width: 1024px) {
+  .p-main-header__text {
+    font-size: 1.4vw;
+    left: 18%;
   }
 }
 
@@ -681,16 +755,49 @@ ul {
   }
 }
 
-.p-title {
+.p-header {
+  background-color: #fff7ef;
+  height: 217px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .p-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.p-header__title {
   color: #707070;
   font-size: 40px;
   padding: 36px 0;
 }
 
 @media screen and (min-width: 1024px) {
-  .p-title {
+  .p-header__title {
     margin-left: 60px;
     font-size: 4vw;
   }
+}
+
+.u-fo_roboto {
+  font-family: 'roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

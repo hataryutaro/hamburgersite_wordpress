@@ -1,0 +1,37 @@
+.p-menu {
+    margin: 0 20px 20px;
+    &__image {
+        object-fit: cover;
+    }
+    &__contener {
+        background-color: $archiveColor;
+        color: $h2Color;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        &__title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        &__caption {
+            font-size: 16px;
+            margin-top: 24px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 23px;
+            width: 246px;
+            margin-top: 10px;
+        }
+        &__button {
+            font-size: 16px;
+            color: $h1Color;
+            border: none;
+            border-radius: 30px;
+            height: 42px;
+            width: 163px;
+            margin: 40px auto;
+        }
+    }
+}
