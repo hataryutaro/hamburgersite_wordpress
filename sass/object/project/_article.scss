@@ -1,28 +1,57 @@
 .p-menu {
-    margin: 0 20px 20px;
+    margin: 0 2.5vw 2.5vw;
+    @include breakpoint(tablet) {
+        display: flex;
+        margin: 0 5vw 5vw;
+    }
     &__image {
         object-fit: cover;
+        width: 95vw;
+        @include breakpoint(tablet) {
+            width: 45vw;
+            @include breakpoint(pc) {
+                width: 35vw;
+            }
+        }
     }
     &__contener {
         background-color: $archiveColor;
         color: $h2Color;
-        padding: 20px;
+        padding: 2.5vw;
+        width: 95vw;
         display: flex;
         flex-direction: column;
+        @include breakpoint(tablet) {
+            width: 45vw;
+            padding: 3vw;
+            @include breakpoint(pc) {
+                width: 35vw;
+            }
+        }
         &__title {
             font-size: 20px;
             font-weight: bold;
             margin-top: 10px;
+            @include breakpoint(pc) {
+                font-size: 2vw;
+            }
         }
         &__caption {
             font-size: 16px;
             margin-top: 24px;
+            @include breakpoint(pc) {
+                font-size: 1.4vw;
+            }
         }
         &__text {
             font-size: 16px;
             line-height: 23px;
-            width: 246px;
+            width: 60vw;
             margin-top: 10px;
+            @include breakpoint(tablet) {
+                width: 25vw;
+                margin-top: 1vw;
+            }
         }
         &__button {
             font-size: 16px;
@@ -32,6 +61,9 @@
             height: 42px;
             width: 163px;
             margin: 40px auto;
+            @include breakpoint(pc) {
+                margin: 3vw auto 1vw;
+            }
         }
     }
 }

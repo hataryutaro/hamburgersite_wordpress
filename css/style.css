@@ -193,18 +193,41 @@ ul {
 }
 
 .p-menu {
-  margin: 0 20px 20px;
+  margin: 0 2.5vw 2.5vw;
+}
+
+@media screen and (min-width: 769px) {
+  .p-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 5vw 5vw;
+  }
 }
 
 .p-menu__image {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 95vw;
+}
+
+@media screen and (min-width: 769px) {
+  .p-menu__image {
+    width: 45vw;
+  }
+}
+
+@media screen and (min-width: 769px) and (min-width: 1024px) {
+  .p-menu__image {
+    width: 35vw;
+  }
 }
 
 .p-menu__contener {
   background-color: #3c2b1c;
   color: #FFF;
-  padding: 20px;
+  padding: 2.5vw;
+  width: 95vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,10 +237,29 @@ ul {
           flex-direction: column;
 }
 
+@media screen and (min-width: 769px) {
+  .p-menu__contener {
+    width: 45vw;
+    padding: 3vw;
+  }
+}
+
+@media screen and (min-width: 769px) and (min-width: 1024px) {
+  .p-menu__contener {
+    width: 35vw;
+  }
+}
+
 .p-menu__contener__title {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .p-menu__contener__title {
+    font-size: 2vw;
+  }
 }
 
 .p-menu__contener__caption {
@@ -225,11 +267,24 @@ ul {
   margin-top: 24px;
 }
 
+@media screen and (min-width: 1024px) {
+  .p-menu__contener__caption {
+    font-size: 1.4vw;
+  }
+}
+
 .p-menu__contener__text {
   font-size: 16px;
   line-height: 23px;
-  width: 246px;
+  width: 60vw;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 769px) {
+  .p-menu__contener__text {
+    width: 25vw;
+    margin-top: 1vw;
+  }
 }
 
 .p-menu__contener__button {
@@ -240,6 +295,12 @@ ul {
   height: 42px;
   width: 163px;
   margin: 40px auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .p-menu__contener__button {
+    margin: 3vw auto 1vw;
+  }
 }
 
 .p-branch__menu {
@@ -370,7 +431,13 @@ ul {
 
 .p-main-caption {
   color: #3c2a10;
-  padding: 20px;
+  padding: 2.5vw;
+}
+
+@media screen and (min-width: 769px) {
+  .p-main-caption {
+    padding: 5vw 5vw 2.5vw;
+  }
 }
 
 .p-main-caption__title {
@@ -379,7 +446,7 @@ ul {
 
 .p-main-caption__text {
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 2.5vw;
 }
 
 .p-footer__contener {
