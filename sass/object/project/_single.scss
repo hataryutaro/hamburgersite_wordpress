@@ -1,0 +1,143 @@
+.p-single {
+    color: $h3Color;
+    font-size: 16px;
+    * {
+        margin: 30px 5vw;
+        @include breakpoint(tablet) {
+            margin: 60px 5vw;
+            @include breakpoint(pc) {
+                margin: 60px 8vw;
+            }
+        }
+    }
+    h2 {
+        font-size: 28px;
+        @include breakpoint (tablet) {
+            font-size: 36px;
+        }
+    }
+    h3 {
+        font-size: 24px;
+        @include breakpoint(tablet) {
+            font-size: 28px;
+        }
+    }
+    h4,
+    h5,
+    h6 {
+        font-size: 20px;
+    }
+    &>img {
+        object-fit: cover;
+        object-position: bottom;
+        height: 35vw;
+        width: 90vw;
+        @include breakpoint(tablet) {
+            @include breakpoint(pc) {
+                width: 64vw;
+                height: 28vw;
+            }
+        }
+    }
+    &__flex-box {
+        display: flex;
+        justify-content: space-between;
+        height: 40vw;
+        @include breakpoint(pc) {
+            height: 25vw;
+        }
+        p {
+            overflow: hidden;
+        }
+        img {
+            object-position: top;
+            object-fit: contain;
+            width: 43%;
+        }
+        * {
+            width: 44vw;
+            margin: 0;
+            @include breakpoint(pc) {
+                width: 34vw;
+            }
+        }
+    }
+    &__iamge-box {
+        img {
+            width: 80vw;
+            @include breakpoint(pc) {
+                width: 50vw;
+            }
+        }
+    }
+    &__images {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        img {
+            width: 90vw;
+            margin: 20px 0;
+            @include breakpoint(tablet) {
+                width: 43vw;
+                @include breakpoint(pc) {
+                    width: 20vw;
+                }
+            }
+        }
+    }
+    ol {
+        li {
+            margin: 0 5vw;
+        }
+    }
+    ul {
+        li {
+            margin: 0 5vw;
+        }
+    }
+    &__code {
+        background-color: #f5f5f5;
+    }
+    table {
+        border-collapse: collapse;
+        text-align: left;
+    }
+    th,
+    td {
+        font-weight: normal;
+        padding: 20px;
+        border: 1px solid #333;
+        background-color: #f5f5f5;
+        width: 55vw;
+    }
+    th {
+        background-color: #f5f5f5;
+        width: 35vw;
+    }
+    button {
+        width: 90vw;
+        max-width: 430px;
+        height: 20vw;
+        max-height: 105px;
+        border: solid 1px $h1Color;
+        border-radius: 10px;
+    }
+    &__strong {
+        margin-bottom: 100px;
+        strong {
+            margin: 0;
+        }
+    }
+}
+
+.p-single__qote-box {
+    background-color: #f5f5f5;
+    padding: 30px 20px;
+    blockquote {
+        margin: 0;
+    }
+    cite {
+        margin: 0;
+        padding-top: 30px;
+    }
+}

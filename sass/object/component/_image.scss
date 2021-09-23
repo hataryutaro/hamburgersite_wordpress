@@ -1,13 +1,14 @@
-.c-takeout__image {
-    background-image: url("/image/takeout.jpg");
-}
-
-.c-eatin__image {
-    background-image: url("/image/eatin.jpg");
+.c-image {
+    &__takeout {
+        background-image: url("/image/takeout.jpg");
+    }
+    &__eatin {
+        background-image: url("/image/eatin.jpg");
+    }
 }
 
 .c-minus {
-    span {
+    &::after {
         content: "";
         background-color: $h2Color;
         height: 2px;
@@ -17,12 +18,23 @@
         @include breakpoint(tablet) {
             width: 4vw;
         }
-        &>span {
-            width: 80px;
-            margin-top: 20px;
-            @include breakpoint(tablet) {
-                width: 8vw;
-            }
+    }
+}
+
+.c-minus-long {
+    &::after {
+        content: "";
+        background-color: $h2Color;
+        display: block;
+        height: 2px;
+        width: 80px;
+        margin-top: 20px;
+        @include breakpoint(tablet) {
+            width: 8vw;
         }
     }
+}
+
+.c-pagination-icon {
+    font-size: 30px;
 }

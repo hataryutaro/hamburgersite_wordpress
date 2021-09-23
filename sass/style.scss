@@ -1,8 +1,8 @@
 @charset "UFT-8";
 
 /*
- * foundation
- */
+* foundation
+*/
 
 @import "foundation/_reset";
 @import "foundation/_base";
@@ -10,29 +10,31 @@
 @import "foundation/_variable";
 
 /*
- * layout
- */
+* layout
+*/
 
 @import "layout/_grid";
 
 /*
- * object
- */
+* object
+*/
 
 // Component
 @import "object/component/_button";
 @import "object/component/image";
 // Project
-@import "object/project/article";
+@import "object/project/_article";
 @import "object/project/_branch";
-@import "object/project/caption";
+@import "object/project/_caption";
 @import "object/project/_footer";
 @import "object/project/_gnavi";
 @import "object/project/_hamburger";
-@import "object/project/_mainhader";
-@import "object/project/map";
-@import "object/project/_searchform";
 @import "object/project/_header";
+@import "object/project/_mainhader";
+@import "object/project/_map";
+@import "object/project/_pagination";
+@import "object/project/_searchform";
+@import "object/project/_single";
 // Utility
 @import "object/utility/_align";
 @import "object/utility/_clearfix";
