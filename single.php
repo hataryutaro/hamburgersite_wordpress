@@ -16,7 +16,7 @@
     <!-- favicon -->
     <link rel="icon" href="image/favicon.png">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="css/hamburger.css" media="screen">
     <!-- JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
 </head>

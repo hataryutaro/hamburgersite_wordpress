@@ -24,7 +24,7 @@
 <body>
     <!-- header -->
     <header class="l-header p-header">
-        <h1 class="p-header__title"><a href="front-page.html">Hamburger</a></h1>
+        <h1 class="p-header__title"><a href="index.html">Hamburger</a></h1>
         <form action="#" method="post" class="p-search-form">
             <label for="search"></label>
             <input type="search" name="search" class="p-search-form__box">

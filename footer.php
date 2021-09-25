@@ -1,0 +1,11 @@
+    <!-- footer -->
+    <footer class="l-footer">
+        <div class="p-footer__contener">
+            <img class="p-footer__contener__image" src="image/pc_footer.png" alt="">
+            <p class="p-footer__contener__text">ショップ情報 | ヒストリー</p>
+            <p class="p-footer__contener__copylight">copyright: RaiseTech</p>
+        </div>
+    </footer>
+    <script src="/js/hamburger.js"></script>
+</body>
+</html>
