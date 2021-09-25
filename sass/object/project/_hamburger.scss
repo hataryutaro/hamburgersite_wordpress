@@ -1,5 +1,5 @@
 .p-hamburger {
-    transition: opacity 300ms 0s ease;
+    transition: opacity 800ms 0 ease;
     cursor: pointer;
     //postion
     position: absolute;
@@ -22,33 +22,9 @@
     &:hover {
         color: $hoverColor;
     }
-    &::before,
-    &::after {
-        transition: opacity 300ms 0s ease;
-        opacity: 0;
-        content: "";
-        width: 45px;
-        height: 6px;
-        background: $h1Color;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        display: block;
-        z-index: 2000;
-    }
-    &::before {
-        transform: rotate( 45deg);
-    }
-    &::after {
-        transform: rotate( -45deg);
-    }
     &.is-open {
         span {
             opacity: 0;
-        }
-        &::before,
-        &::after {
-            opacity: 1;
         }
         &:hover::before,
         &:hover::after {
@@ -56,13 +32,3 @@
         }
     }
 }
-
-
-/*
-.p-hamburger.is-open {
-    &::before,
-    &::after {
-        right: 15px;
-    }
-}
-*/

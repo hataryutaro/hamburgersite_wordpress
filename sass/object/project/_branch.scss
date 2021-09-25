@@ -45,7 +45,7 @@
             &:hover {
                 .p-branch__title {
                     color: $hoverColor;
-                    span {
+                    &::after {
                         background-color: $hoverColor;
                     }
                 }
