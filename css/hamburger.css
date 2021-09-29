@@ -159,11 +159,11 @@ ul {
 * object
 */
 .c-image__takeout {
-  background-image: url("/image/takeout.jpg");
+  background-image: url(../image/takeout.jpg);
 }
 
 .c-image__eatin {
-  background-image: url("/image/eatin.jpg");
+  background-image: url(../image/eatin.jpg);
 }
 
 .c-minus::after {
@@ -958,7 +958,7 @@ ul {
 .p-search-form__box {
   padding: 0;
   margin: 0;
-  background-image: url("/image/search.png");
+  background-image: url(../image/search.png);
   background-repeat: no-repeat;
   background-position: 10px center;
   width: 50vw;
