@@ -1,4 +1,4 @@
-.p-single {
+.editor-styles-wrapper {
     color: $h3Color;
     font-size: 16px;
     &>* {
@@ -63,6 +63,7 @@
     // WordPress
     .wp-block-pullquote {
         background-color: #f5f5f5;
+        border: none;
         blockquote {
             p {
                 margin: 10px;

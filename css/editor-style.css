@@ -1,0 +1,252 @@
+/*
+* foundation
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'm-plus-1m', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*---base color----*/
+/*---font color----*/
+/*---font famliy----*/
+/*
+* layout
+*/
+/*
+* object
+*/
+.editor-styles-wrapper {
+  color: #3c2a10;
+  font-size: 16px;
+}
+
+.editor-styles-wrapper > * {
+  margin: 30px 5vw;
+}
+
+@media screen and (min-width: 769px) {
+  .editor-styles-wrapper > * {
+    margin: 60px 5vw;
+  }
+}
+
+@media screen and (min-width: 769px) and (min-width: 1024px) {
+  .editor-styles-wrapper > * {
+    margin: 60px 8vw;
+  }
+}
+
+.editor-styles-wrapper h2 {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 769px) {
+  .editor-styles-wrapper h2 {
+    font-size: 36px;
+  }
+}
+
+.editor-styles-wrapper h3 {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 769px) {
+  .editor-styles-wrapper h3 {
+    font-size: 28px;
+  }
+}
+
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-size: 20px;
+}
+
+.editor-styles-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.editor-styles-wrapper ol li {
+  margin: 0 5vw;
+}
+
+.editor-styles-wrapper ul li {
+  margin: 0 5vw;
+}
+
+.editor-styles-wrapper__code {
+  background-color: #f5f5f5;
+}
+
+.editor-styles-wrapper table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.editor-styles-wrapper th,
+.editor-styles-wrapper td {
+  font-weight: normal;
+  padding: 20px;
+  border: 1px solid #333;
+  background-color: #f5f5f5;
+  width: 55vw;
+}
+
+.editor-styles-wrapper th {
+  background-color: #f5f5f5;
+  width: 35vw;
+}
+
+.editor-styles-wrapper .wp-block-pullquote {
+  background-color: #f5f5f5;
+  border: none;
+}
+
+.editor-styles-wrapper .wp-block-pullquote blockquote p {
+  margin: 10px;
+}
+
+.editor-styles-wrapper .wp-block-pullquote blockquote cite {
+  margin-top: 30px;
+}
+
+.editor-styles-wrapper .wp-block-image figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+  height: 35vw;
+  width: 90vw;
+}
+
+@media screen and (min-width: 769px) and (min-width: 1024px) {
+  .editor-styles-wrapper .wp-block-image figure img {
+    width: 64vw;
+    height: 28vw;
+  }
+}
+
+.editor-styles-wrapper .wp-block-media-text figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.widget .menu > li {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 40px 0;
+}
+
+.sub-menu {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.sub-menu > li {
+  margin: 20px;
+}
+/*# sourceMappingURL=editor-style.css.map */

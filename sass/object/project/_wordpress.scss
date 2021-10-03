@@ -1,0 +1,15 @@
+.widget {
+    .menu>li {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 40px 0;
+    }
+}
+
+.sub-menu {
+    font-size: 16px;
+    font-weight: normal;
+    &>li {
+        margin: 20px;
+    }
+}
