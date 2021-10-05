@@ -200,16 +200,17 @@ ul {
   width: 35vw;
 }
 
-.editor-styles-wrapper .wp-block-pullquote {
+.editor-styles-wrapper .wp-block-quote {
   background-color: #f5f5f5;
+  padding: 30px;
   border: none;
 }
 
-.editor-styles-wrapper .wp-block-pullquote blockquote p {
-  margin: 10px;
+.editor-styles-wrapper .wp-block-quote p {
+  margin-bottom: 30px;
 }
 
-.editor-styles-wrapper .wp-block-pullquote blockquote cite {
+.editor-styles-wrapper .wp-block-quote cite {
   margin-top: 30px;
 }
 
@@ -248,5 +249,16 @@ ul {
 
 .sub-menu > li {
   margin: 20px;
+}
+
+.p-notfound {
+  color: #3c2a10;
+  margin: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed !important;
+  }
 }
 /*# sourceMappingURL=editor-style.css.map */

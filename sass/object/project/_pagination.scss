@@ -1,34 +1,39 @@
-.p-pagination {
+.wp-pagenavi {
+    font-family: 'roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
     color: $h1Color;
     font-size: 16px;
     display: flex;
     margin: 60px 20px 30px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     @include breakpoint(tablet) {
         margin: 60px auto;
+        justify-content: space-around;
     }
-    .p-total-page {
+    .pages {
+        border: none;
         display: none;
         margin-right: 20px;
         @include breakpoint(tablet) {
             display: flex;
         }
     }
-}
-
-.p-page {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include breakpoint(tablet) {
-        width: 500px;
-        @include breakpoint(pc) {
-            width: 600px;
+    .current {
+        display: none;
+        background-color: $h3Color;
+        color: $h2Color;
+        border: solid $h1Color 1px;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        @include breakpoint(tablet) {
+            display: flex;
         }
     }
-    &__item {
+    .page {
         display: none;
         justify-content: center;
         align-items: center;
@@ -39,34 +44,38 @@
             display: flex;
         }
     }
-    &__prev {
-        a {
-            display: flex;
-            align-items: center;
-            div {
-                margin-left: 10px;
-                @include breakpoint(tablet) {
-                    display: none;
-                }
+    .nextpostslink {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border: none;
+        &::before {
+            margin-right: 16px;
+            content: "次";
+            font-size: 16px;
+            @include breakpoint(tablet) {
+                display: none;
             }
         }
     }
-    &__next {
-        a {
-            display: flex;
-            align-items: center;
-            div {
-                margin-right: 10px;
-                @include breakpoint(tablet) {
-                    display: none;
-                }
+    .previouspostslink {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border: none;
+        &::after {
+            margin-left: 16px;
+            content: "前";
+            font-size: 16px;
+            @include breakpoint(tablet) {
+                display: none;
             }
         }
     }
-}
-
-.this {
-    background-color: $h3Color;
-    color: $h2Color;
-    border: solid $h1Color 1px;
 }

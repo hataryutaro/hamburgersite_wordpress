@@ -4,6 +4,7 @@
     add_theme_support('menus');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
+    add_theme_support('automatic-feed-links');
 
     //title output
     function hamburger_title(){
@@ -36,7 +37,7 @@
             array(
                 'name'          => 'バーガーウィジェット',
                 'id'            => 'burger_widget',
-                'description'   => 'カテゴリー用ウィジェットです',
+                'description'   => 'サイドバー用ウィジェットです',
                 'before_widget' => '<div id="%1$s" class="widget %2$s">',
                 'after_widget'  => '</div>',
                 'before_title'  => '',
@@ -45,9 +46,33 @@
         );
     }
     add_action( 'widgets_init', 'hamburger_widgets_init' );
+    
+    function footer_widgets_init() {
+        register_sidebar (
+            array(
+                'name'          => 'フッターウィジェット',
+                'id'            => 'footer_widget',
+                'description'   => 'フッター用ウィジェットです',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '',
+                'after_title'   => "</h2>\n",
+            )
+        );
+    }
+    add_action( 'widgets_init', 'footer_widgets_init' );
+    
     //editor styleを適応させる
     function add_block_editor_styles() {
         wp_enqueue_style( 'block-style', get_stylesheet_directory_uri() . '/css/editor-style.css' );
     }
     add_action( 'enqueue_block_editor_assets', 'add_block_editor_styles' );
-    
+    /*
+    include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    if(is_plugin_active( 'amp/amp.php' )){
+        //プラグインが有効の場合
+    } else {
+    //プラグインが無効の場合
+    echo 'プラグインを入れてください'
+    }
+    */

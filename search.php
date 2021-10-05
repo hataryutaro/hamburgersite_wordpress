@@ -6,12 +6,11 @@
         <div class="p-main-header">
             <img src="<?php echo get_template_directory_uri(); ?>/image/takeout.jpg" alt="mainimage" class="p-main-header__image">
             <div class="p-main-header__bg"></div>
-            <h2 class="p-main-header__title u-fo_roboto">Menu:</h2>
-            <p class="p-main-header__text"><?php echo get_query_var('category_name') ?></p>
+            <h2 class="p-main-header__title u-fo_roboto">Seach:</h2>
+            <p class="p-main-header__text"><?php echo $_GET['s']; ?></p>
         </div>
-        <!--見出し部分-->
         <div class="p-main-caption">
-            <h3 class="p-main-caption__title"><?php echo category_description(); ?></h3>
+            <h3 class="p-main-caption__title"><?php echo $_GET['s']; ?><br>の検索結果です。</h3>
         </div>
         <!--記事-->
         <article class="p-menus">
@@ -30,11 +29,12 @@
                     </div>
                 <?php endwhile; 
             else : 
-                ?><p>表示する記事がありません</p><?php 
+                ?><p class="p-notfound">表示する記事がありません</p><?php 
             endif; ?>
         </article>
         <!--pagenaition-->
         <?php wp_pagenavi(); ?>
     </main>
     <!-- footer -->
-<?php get_footer(); ?>
+
+        <?php get_footer(); ?>

@@ -4,12 +4,11 @@
     @include breakpoint(tablet) {
         padding: 5vw 5vw 2.5vw;
     }
-    &__title {
+    &__title::first-line {
         font-size: 28px;
     }
-    &__text {
+    &__title {
         font-size: 16px;
-        margin-top: 2.5vw;
         @include breakpoint(tablet) {}
     }
 }

@@ -4,9 +4,17 @@
         margin-right: 30px;
     }
     &__box {
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         padding: 0;
         margin: 0;
-        background-image: url(../image/search.png);
+        //background-image: url(../image/search.png);
         background-repeat: no-repeat;
         background-position: 10px center;
         width: 50vw;
@@ -15,6 +23,9 @@
         border-radius: 10px;
         @include breakpoint(pc) {
             width: 20vw;
+        }
+        &:focus {
+            background-image: none;
         }
     }
     &__btn {

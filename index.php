@@ -11,7 +11,7 @@
     <article class="p-branch">
         <ul class="p-branch__menu">
             <li class="p-branch__menu__item c-image__takeout">
-                <a href="#">
+                <a href="/index.php/category/takeout/">
                     <h2 class="p-branch__title c-minus">Take Out</h2>
                     <div>
                         <dl class="p-branch__box">
@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="p-branch__menu__item c-image__eatin">
-                <a href="#">
+                <a href="index.php/category/eatin/">
                     <h2 class="p-branch__title c-minus">Eat In</h2>
                     <dl class="p-branch__box">
                         <dt class="p-branch__box__title">Take Out</dt>

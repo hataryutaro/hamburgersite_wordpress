@@ -1,115 +1,98 @@
-.p-page {
+.l-main .p-page {
+    width: 100%;
+}
+
+.p-page__wrapper {
     color: $h3Color;
     font-size: 16px;
-    div:first-of-type {
-        width: 100vw;
-        @include breakpoint(pc) {
-            width: 80vw;
-        }
-        &>* {
-            margin: 30px 5vw;
-            @include breakpoint(tablet) {
-                margin: 60px 5vw;
-                @include breakpoint(pc) {
-                    margin: 60px 8vw;
-                }
+    &>* {
+        margin: 30px 5vw;
+        @include breakpoint(tablet) {
+            margin: 60px 5vw;
+            @include breakpoint(pc) {
+                margin: 60px 8vw;
             }
         }
-        h2 {
+    }
+    h2 {
+        font-size: 28px;
+        @include breakpoint (tablet) {
+            font-size: 36px;
+        }
+    }
+    h3 {
+        font-size: 24px;
+        @include breakpoint(tablet) {
             font-size: 28px;
-            @include breakpoint (tablet) {
-                font-size: 36px;
-            }
         }
-        h3 {
-            font-size: 24px;
-            @include breakpoint(tablet) {
-                font-size: 28px;
-            }
+    }
+    h4,
+    h5,
+    h6 {
+        font-size: 20px;
+    }
+    img {
+        object-fit: cover;
+        object-position: bottom;
+    }
+    ol {
+        li {
+            margin: 0 5vw;
         }
-        h4,
-        h5,
-        h6 {
-            font-size: 20px;
+    }
+    ul {
+        li {
+            margin: 0 5vw;
         }
-        img {
-            object-fit: cover;
-            object-position: bottom;
+    }
+    table {
+        border-collapse: collapse;
+        text-align: left;
+    }
+    th,
+    td {
+        font-weight: normal;
+        padding: 20px;
+        border: 1px solid #333;
+        background-color: #f5f5f5;
+        width: 55vw;
+    }
+    th {
+        background-color: #f5f5f5;
+        width: 35vw;
+    }
+    // WordPress
+    .wp-block-quote {
+        background-color: #f5f5f5;
+        padding: 30px;
+        p {
+            margin-bottom: 30px;
         }
-        ol {
-            li {
-                margin: 0 5vw;
-            }
+        cite {
+            margin-top: 30px;
         }
-        ul {
-            li {
-                margin: 0 5vw;
-            }
-        }
-        &__code {
-            background-color: #f5f5f5;
-        }
-        table {
-            border-collapse: collapse;
-            text-align: left;
-        }
-        th,
-        td {
-            font-weight: normal;
-            padding: 20px;
-            border: 1px solid #333;
-            background-color: #f5f5f5;
-            width: 55vw;
-        }
-        th {
-            background-color: #f5f5f5;
-            width: 35vw;
-        }
-        // WordPress
-        .wp-block-pullquote {
-            background-color: #f5f5f5;
-            blockquote {
-                p {
-                    margin: 10px;
-                }
-                cite {
-                    margin-top: 30px;
-                }
-            }
-        }
-        .wp-block-image {
-            figure {
-                display: block;
-                margin: 0;
-                img {
-                    object-fit: cover;
-                    object-position: bottom;
-                    height: 35vw;
-                    width: 90vw;
-                    @include breakpoint(tablet) {
-                        @include breakpoint(pc) {
-                            width: 64vw;
-                            height: 28vw;
-                        }
+    }
+    .wp-block-image {
+        figure {
+            img {
+                object-fit: cover;
+                object-position: bottom;
+                height: 35vw;
+                width: 90vw;
+                @include breakpoint(tablet) {
+                    @include breakpoint(pc) {
+                        width: 64vw;
+                        height: 28vw;
                     }
                 }
             }
         }
-        .wp-block-media-text {
-            figure {
-                img {
-                    margin: 0;
-                    object-fit: cover;
-                    height: 100%;
-                }
-            }
-            div {
-                margin: 0;
-                padding: 0;
-                p {
-                    margin: 0;
-                    padding: 0;
-                }
+    }
+    .wp-block-media-text {
+        figure {
+            img {
+                object-fit: cover;
+                height: 100%;
             }
         }
     }

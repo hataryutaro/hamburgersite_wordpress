@@ -13,3 +13,14 @@
         margin: 20px;
     }
 }
+
+.p-notfound {
+    color: $h3Color;
+    margin: 60px;
+}
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        position: fixed!important;
+    }
+}

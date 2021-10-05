@@ -11,12 +11,34 @@
         z-index: -1;
         //display: none;
     }
-    &__text {
-        color: $h2Color;
-        font-size: 20px;
-    }
     &__copylight {
         color: $h2Color;
         font-size: 14px;
+    }
+}
+
+.menu-footermenu-container {
+    .menu {
+        display: flex;
+        justify-content: center;
+        .menu-item {
+            margin: 0 20px 15px;
+            padding: 0;
+            color: $h2Color;
+            font-size: 20px;
+            position: relative;
+            &:first-child::before {
+                display: none;
+            }
+            &::before {
+                position: absolute;
+                left: -20px;
+                content: "";
+                background-color: $h2Color;
+                height: 36px;
+                width: 3px;
+                display: block;
+            }
+        }
     }
 }

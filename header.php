@@ -11,6 +11,13 @@
     <!-- font -->
     <!-- CSS -->
     <!-- JS -->
+    <?php if( is_user_logged_in() ) : ?>
+    <style type="text/css">
+    .l-sidebar {
+    margin-top: 32px;
+    }
+    </style>
+    <?php endif; ?>
     <?php wp_head(); ?>
 </head>
 

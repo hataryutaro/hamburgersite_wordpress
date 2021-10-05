@@ -4,7 +4,7 @@
     <main class="l-main">
         <!-- main header -->
         <div class="p-main-header">
-            <img src="<?php echo get_template_directory_uri(); ?>/image/page.jpg" alt="mainimage" class="p-main-header__image">
+            <img src="<?php echo get_template_directory_uri(); ?>/image/shop.jpg" alt="mainimage" class="p-main-header__image">
             <h1 class="p-main-header__title"><?php the_title(); ?></h1>
         </div>
         <!--見出し部分-->
@@ -13,7 +13,7 @@
                 if( have_posts() ) :
                     while( have_posts() ) :
                         the_post(); ?>
-                        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                        <div id="post-<?php the_ID(); ?>" <?php post_class('p-page__wrapper'); ?>>
                             <?php the_content(); ?>
                         </div>
                     <?php endwhile;

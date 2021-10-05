@@ -9,7 +9,18 @@
         </div>
         <!--見出し部分-->
         <article class="p-single">
-        <?php the_content(); ?>
+            <?php
+                    if( have_posts() ) :
+                        while( have_posts() ) :
+                            the_post(); ?>
+                            <div id="post-<?php the_ID(); ?>" <?php post_class('p-single__wrapper'); ?>>
+                                <?php the_content(); ?>
+                            </div>
+                        <?php endwhile;
+                    else :
+                        ?><p>表示する記事がありません</p><?php
+                    endif;
+                ?>
         </article>
     </main>
     <!-- footer -->
