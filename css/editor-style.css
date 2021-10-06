@@ -235,30 +235,4 @@ ul {
      object-fit: cover;
   height: 100%;
 }
-
-.widget .menu > li {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 40px 0;
-}
-
-.sub-menu {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.sub-menu > li {
-  margin: 20px;
-}
-
-.p-notfound {
-  color: #3c2a10;
-  margin: 60px;
-}
-
-@media screen and (max-width: 600px) {
-  #wpadminbar {
-    position: fixed !important;
-  }
-}
 /*# sourceMappingURL=editor-style.css.map */

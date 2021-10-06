@@ -4,7 +4,7 @@
 <main class="l-main">
     <!-- main header -->
     <div class="p-main-header">
-        <img src="<?php echo get_template_directory_uri(); ?>/image/main.svg" alt="mainimage" class="p-main-header__image">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/image/main.svg" alt="mainimage" class="p-main-header__image">
         <h2 class="p-main-header__title"><?php bloginfo( 'description' ); ?></h2>
     </div>
     <!-- branch menu -->
@@ -43,7 +43,7 @@
     <!-- map -->
     <section>
         <div class="p-map">
-            <img class="p-map__image" src="<?php echo get_template_directory_uri(); ?>/image/map_pc.jpg" alt="map">
+            <img class="p-map__image" src="<?php echo esc_url(get_template_directory_uri()); ?>/image/map_pc.jpg" alt="map">
             <div class="p-map__contener">
                 <div class="p-map__contener__bg">
                     <h2 class="p-map__contener__title c-minus-long">見出しが入ります

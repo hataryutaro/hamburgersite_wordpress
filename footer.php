@@ -1,7 +1,7 @@
     <!-- footer -->
     <footer class="l-footer">
         <div class="p-footer__contener">
-        <img class="p-footer__contener__image" src="<?php echo get_template_directory_uri(); ?>/image/pc_footer.png" alt="">
+        <img class="p-footer__contener__image" src="<?php echo esc_url(get_template_directory_uri()); ?>/image/pc_footer.png" alt="">
             <?php
                 if ( is_active_sidebar( 'footer_widget' ) ) :
                     dynamic_sidebar( 'footer_widget' );

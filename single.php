@@ -4,7 +4,7 @@
     <main class="l-main">
         <!-- main header -->
         <div class="p-main-header">
-            <img src="<?php echo get_template_directory_uri(); ?>/image/cheese_burger.png" alt="mainimage" class="p-main-header__image">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/image/cheese_burger.png" alt="mainimage" class="p-main-header__image">
             <h1 class="p-main-header__title"><?php the_title(); ?></h1>
         </div>
         <!--見出し部分-->

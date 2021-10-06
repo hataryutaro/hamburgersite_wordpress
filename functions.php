@@ -1,7 +1,7 @@
 <?php 
     //theme support
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) ); //必ず記述する
-    add_theme_support('menus');
+    register_nav_menus();
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('automatic-feed-links');
@@ -25,7 +25,7 @@
         wp_enqueue_script('mplus',get_template_directory_uri(),'/js/font.js',array() );
         //style sheet
         wp_enqueue_style( 'style',get_stylesheet_uri().'/style.css', array(), '1.0.0' );
-        wp_enqueue_style('hamburger',get_template_directory_uri().'/css/hamburger.css',array(),'1.0.0');        //editstyle
+        wp_enqueue_style('hamburger',get_template_directory_uri().'/css/hamburger.css',array(),'1.0.0');
         //js
         wp_enqueue_script('hamburger_button',get_theme_file_uri( '/js/hamburger.js' ),array('jquery'),'1.0.0' ,false);
     }
@@ -67,12 +67,4 @@
         wp_enqueue_style( 'block-style', get_stylesheet_directory_uri() . '/css/editor-style.css' );
     }
     add_action( 'enqueue_block_editor_assets', 'add_block_editor_styles' );
-    /*
-    include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-    if(is_plugin_active( 'amp/amp.php' )){
-        //プラグインが有効の場合
-    } else {
-    //プラグインが無効の場合
-    echo 'プラグインを入れてください'
-    }
-    */
+    
