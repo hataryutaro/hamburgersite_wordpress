@@ -6,6 +6,9 @@
     add_theme_support('post-thumbnails');
     add_theme_support('automatic-feed-links');
 
+
+
+
     //title output
     function hamburger_title(){
         if (is_front_page() && is_home()){

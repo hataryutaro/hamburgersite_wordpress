@@ -6,7 +6,14 @@ Theme URI: https://github.com/hataryutaro/hamburgersite_wordpress
 Author: Ryutaro Hata
 Author URI: none
 Tags: right-sidebar, blog
+Requires at least: 5.8
+Tested up to: 5.8
+Requires PHP:7.3.5
 License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: hamburger
+License URI:http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain:hamburgersite
+
+hamburgersite WordPress theme, Copyright (C) 2021 hataryutarou
+hamburgersite WordPress theme is licensed under the GPL.
+
 */

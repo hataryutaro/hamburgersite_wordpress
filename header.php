@@ -22,6 +22,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <!-- header -->
     <header class="l-header p-header">
     <?php require_once('exists.php'); ?>
