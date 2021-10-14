@@ -5,15 +5,15 @@
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('automatic-feed-links');
-
-
-
+    add_theme_support( "wp-block-styles" );
+    add_theme_support( "responsive-embeds" );
+    add_theme_support( "align-wide" );
 
     //title output
     function hamburger_title(){
         if (is_front_page() && is_home()){
             $title = get_bloginfo('name','display');
-        }else if(is_singular()){
+        }else{
             $title = single_post_title('',false);
         }
         return $title;
@@ -71,3 +71,30 @@
     }
     add_action( 'enqueue_block_editor_assets', 'add_block_editor_styles' );
     
+    //ブロックにカスタムスタイルを追加
+    register_block_style(
+        'core/image', // ブロック名
+        [
+            'name'         => 'shadow', // スタイルで付けるクラスに使う名前
+            'label'        => '影付き',
+            'inline_style' => '.is-style-shadow {
+                box-shadow: 10px 5px 5px black;
+            }', // 追加するCSS
+        ]
+    );
+    //オリジナルのブロックパターンを追加
+    add_action('admin_init', function () {
+        //1 パラメータの設定
+        $pattern = [
+            "title" => "my-button",
+            "categories" => ["original"],
+            "descripiton" => "",
+            "content" => '<!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button {"className":"my-button"} --><div class="wp-block-button my-button"><a class="wp-block-button__link">オリジナルボタン</a></div><!-- /wp:button --></div><!-- /wp:buttons -->',
+        ];
+    
+        //2 ブロックパターンの登録
+        register_block_pattern($pattern["title"], $pattern);
+    
+        //3 カテゴリーの登録
+        register_block_pattern_category('original', ['label' => 'オリジナル']);
+    });

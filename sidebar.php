@@ -1,6 +1,6 @@
 <!-- sidebar -->
 <aside class="l-sidebar p-gmenu">
-<?php
+    <?php
         if ( is_active_sidebar( 'burger_widget' ) ) :
             dynamic_sidebar( 'burger_widget' );
         else:

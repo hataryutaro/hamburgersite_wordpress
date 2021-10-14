@@ -15,6 +15,7 @@
             <p class="p-footer__contener__copylight">copyright: RaiseTech</p>
         </div>
     </footer>
+    <div class="p-gmenu__bg"></div>
     <script src="/js/hamburger.js"></script>
     <?php wp_footer(); ?>
 </body>
