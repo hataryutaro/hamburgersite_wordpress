@@ -982,12 +982,13 @@ ul {
   font-family: 'roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
-  color: #707070;
   font-size: 16px;
+  color: #707070;
+  margin: 60px 20px 30px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 60px 20px 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -999,15 +1000,21 @@ ul {
 @media screen and (min-width: 769px) {
   .wp-pagenavi {
     margin: 60px auto;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .wp-pagenavi .pages {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 5vw;
   border: none;
   display: none;
-  margin-right: 20px;
 }
 
 @media screen and (min-width: 769px) {
@@ -1019,18 +1026,19 @@ ul {
 }
 
 .wp-pagenavi .current {
-  display: none;
-  background-color: #3c2a10;
+  margin: 20px;
   color: #FFF;
+  background-color: #3c2a10;
   border: solid #707070 1px;
+  width: 35px;
+  height: 35px;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 35px;
-  height: 35px;
 }
 
 @media screen and (min-width: 769px) {
@@ -1042,6 +1050,10 @@ ul {
 }
 
 .wp-pagenavi .page {
+  margin: 20px;
+  border: solid 1px;
+  width: 35px;
+  height: 35px;
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1049,9 +1061,6 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 35px;
-  height: 35px;
-  border: solid 1px;
 }
 
 @media screen and (min-width: 769px) {
@@ -1063,19 +1072,21 @@ ul {
 }
 
 .wp-pagenavi .nextpostslink {
-  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-right: 5vw;
+  width: 35px;
+  height: 35px;
+  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 35px;
-  height: 35px;
-  border: none;
 }
 
 .wp-pagenavi .nextpostslink::before {
@@ -1091,19 +1102,27 @@ ul {
 }
 
 .wp-pagenavi .previouspostslink {
-  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 5vw;
+  width: 35px;
+  height: 35px;
+  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 35px;
-  height: 35px;
-  border: none;
+}
+
+@media screen and (min-width: 769px) {
+  .wp-pagenavi .previouspostslink {
+    left: 100px;
+  }
 }
 
 .wp-pagenavi .previouspostslink::after {

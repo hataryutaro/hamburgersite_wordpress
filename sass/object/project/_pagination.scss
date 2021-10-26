@@ -1,57 +1,89 @@
 .wp-pagenavi {
+    //Font
     font-family: 'roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
-    color: $h1Color;
     font-size: 16px;
-    display: flex;
+    //Color
+    color: $h1Color;
+    //余白
     margin: 60px 20px 30px;
+    //Postion
+    position: relative;
+    //Display
+    display: flex;
     justify-content: space-between;
     align-items: center;
     @include breakpoint(tablet) {
         margin: 60px auto;
-        justify-content: space-around;
+        justify-content: center;
     }
     .pages {
+        //<span>ex.Page 1of3
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        margin-left: 5vw;
         border: none;
         display: none;
-        margin-right: 20px;
         @include breakpoint(tablet) {
             display: flex;
         }
     }
     .current {
-        display: none;
-        background-color: $h3Color;
+        //<span>今いるページ
+        //余白
+        margin: 20px;
+        //Color
         color: $h2Color;
+        background-color: $h3Color;
+        //Border
         border: solid $h1Color 1px;
-        justify-content: center;
-        align-items: center;
+        //Size
         width: 35px;
         height: 35px;
+        //Display
+        display: none;
+        justify-content: center;
+        align-items: center;
         @include breakpoint(tablet) {
             display: flex;
         }
     }
     .page {
+        //<span>PageLink
+        //余白
+        margin: 20px;
+        //Border
+        border: solid 1px;
+        //Size
+        width: 35px;
+        height: 35px;
+        //Display
         display: none;
         justify-content: center;
         align-items: center;
-        width: 35px;
-        height: 35px;
-        border: solid 1px;
         @include breakpoint(tablet) {
             display: flex;
         }
     }
     .nextpostslink {
-        font-size: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        //<a>Next
+        //Postion
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-right: 5vw;
+        //Size
         width: 35px;
         height: 35px;
+        //Border
         border: none;
+        //Display
+        display: flex;
+        justify-content: center;
         &::before {
             margin-right: 16px;
             content: "次";
@@ -62,13 +94,24 @@
         }
     }
     .previouspostslink {
-        font-size: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        //<a>Prev
+        //Postion
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        margin-left: 5vw;
+        //Size
         width: 35px;
         height: 35px;
+        //Border
         border: none;
+        //Display
+        display: flex;
+        justify-content: center;
+        @include breakpoint(tablet) {
+            left: 100px;
+        }
         &::after {
             margin-left: 16px;
             content: "前";
